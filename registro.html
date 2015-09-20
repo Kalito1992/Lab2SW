@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+	<title>Registro</title>
+	<link rel='stylesheet' type='text/css' href='estilos/propio.css' />
+   
+		   
+	 <script>
+		function vervalores(){
+		 var sAux="";
+		 var frm = document.getElementById("regis");
+		 for (i=0;i<frm.elements.length;i++)
+		 {
+		 sAux += "NOMBRE: " + frm.elements[i].name + " ";
+		 sAux += "VALOR: " + frm.elements[i].value + "\n" ;
+		 }
+		 alert(sAux);
+		}
+	</script> 	   
+  </head>
+   
+  <body>
+   	<div class="center">
+		<form id='regis' name='registro' onSubmit='vervalores()'> 
+		<h1>REGISTRO</h1>
+		
+		Nombres y Apellidos: <input type="text" name="nombre" required><br><br>
+		Correo electrónico: <input type="email" name="correo" required><br><br>
+		Password: <input type="password" name="pass" required><br><br>
+		Número de Teléfono: <input type="text" name="telefono" required><br><br>
+		Especialidad: <select name="especialidades" required>
+				<option value="IS">Ingeniería del Software</option>
+				<option value="Compu">Computación</option>
+				<option value="IC">Ingeniería de Computadores</option>
+		    </select><br><br>
+		Tecnologías: <input type="text" name="herramientas"><br><br>
+		Subir Imagen: <input name="uploadedfile" type="file" /><br><br>
+		<input type="submit" value="Enviar"><br><br>
+		
+		</form>
+	</div>
+	
+ 
+ 
+
+</body>
+</html>
